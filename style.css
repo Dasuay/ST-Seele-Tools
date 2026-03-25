@@ -1,0 +1,340 @@
+#seele-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+}
+
+/* 头部 */
+#seele-menu .header-group {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+#seele-menu .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#seele-menu .header-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+}
+
+#seele-menu .header-tip {
+    font-size: 0.75em;
+    opacity: 0.6;
+}
+
+#seele-menu .header-tabs {
+    display: flex;
+    gap: 4px;
+}
+
+#seele-menu .tab-header {
+    flex: 1;
+    padding: 6px;
+    border-bottom: 2px solid transparent;
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.2s;
+    cursor: pointer;
+    user-select: none;
+}
+
+#seele-menu .tab-header.active {
+    font-weight: bold;
+    opacity: 1;
+    border-bottom-color: #5b8db8;
+}
+
+/* 滚动内容区 */
+#seele-menu .scroll-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+    padding-right: 2px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#seele-menu .scroll-content::-webkit-scrollbar {
+    width: 3px;
+}
+
+#seele-menu .scroll-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+/* 组件 */
+#seele-menu .tab-content {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 5px 10px;
+}
+
+#seele-menu .tab-content.active {
+    display: flex;
+}
+
+#seele-menu .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+#seele-menu .label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+#seele-menu .label-title {
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+#seele-menu .label-desc {
+    font-size: 0.7em;
+    opacity: 0.6;
+}
+
+#seele-menu .input-wrapper {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#seele-menu .btn-line {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    background: #5b8db8;
+}
+
+#seele-menu .input-wrapper>.btn-gap {
+    flex: 1;
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 4px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-size: 0.8em;
+    user-select: none;
+}
+
+#seele-menu .input-wrapper>.btn-gap>i {
+    font-size: 2em;
+}
+
+#seele-menu .text-input {
+    flex: 1;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 8px;
+    border: none;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.85em;
+    height: 30px;
+}
+
+#seele-menu .select-input {
+    flex: 1;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8em;
+    height: 30px;
+    margin: 0;
+}
+
+#seele-menu .btn-icon {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    font-size: 0.9em;
+}
+
+#seele-menu :is(.btn-icon, .btn-gap).active {
+    background: #5b8db8;
+}
+
+#seele-menu :is(.btn-icon.succ, .btn-gap.succ).active, 
+#seele-menu .btn-line.succ {
+    background: #7a9a83;
+}
+
+#seele-menu :is(.btn-icon.warn, .btn-gap.warn).active, 
+#seele-menu .btn-line.warn {
+    background: #b8965b;
+}
+
+#seele-menu :is(.btn-icon.error, .btn-gap.error).active, 
+#seele-menu .btn-line.error {
+    background: #b85b5b;
+}
+
+#seele-menu .input-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    row-gap: 6px;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 6px 8px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+#seele-menu .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 0.8em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#seele-menu .checkbox-label input {
+    user-select: none;
+    transform: scale(0.9);
+    margin: 0;
+}
+
+#seele-menu .input-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 4px 0;
+    flex-shrink: 0;
+}
+
+#seele-menu .scan-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 2px;
+    min-height: 0;
+}
+
+#seele-menu .chip {
+    font-size: 0.75em;
+    padding: 2px 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid transparent;
+    user-select: none;
+    background: rgba(91, 141, 184, 0.15);
+    border-color: rgba(91, 141, 184, 0.3);
+}
+
+#seele-menu .input-search {
+    flex: 1;
+    display: flex;
+    max-height: 340px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 6px;
+    margin-top: 10px;
+    flex-direction: column;
+    position: relative;
+    user-select: none;
+}
+
+#seele-menu .search-item {
+    display: flex;
+    padding: 6px 8px;
+    flex-direction: column;
+    font-size: 0.8em;
+    cursor: pointer;
+    gap: 2px;
+}
+
+#seele-menu .search-item .item-header {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.7;
+    font-size: 0.8em;
+}
+
+#seele-menu .search-item .item-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #seele-menu .tab-header:hover {
+        background: rgba(0, 0, 0, 0.03);
+        opacity: 0.9;
+    }
+
+    #seele-menu .chip:hover {
+        background: rgba(91, 141, 184, 0.5);
+    }
+
+    #seele-menu :is(.btn-icon, .btn-gap):hover {
+        background: #5b8db8;
+    }
+
+    #seele-menu :is(.btn-icon.succ, .btn-gap.succ):hover {
+        background: #7a9a83;
+    }
+
+    #seele-menu :is(.btn-icon.warn, .btn-gap.warn):hover {
+        background: #b8965b;
+    }
+
+    #seele-menu :is(.btn-icon.error, .btn-gap.error):hover {
+        background: #b85b5b;
+    }
+
+    #seele-menu .search-item:hover {
+        background: rgba(122, 154, 131, 0.1);
+    }
+}
+
+@media (max-width: 768px) {
+    #seele-menu .input-options.optlist {
+        grid-template-columns: 1fr;
+    }
+}
