@@ -613,7 +613,7 @@ function addMenuButton() {
         </div>
     `);
     $seeleButton.on('click', () => {openMenu()});
-    $extensionsMenu.children().last().before($seeleButton);
+    $extensionsMenu.children().last().after($seeleButton);
 }
 
 // 双击聊天栏启动菜单
